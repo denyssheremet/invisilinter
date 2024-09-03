@@ -14,6 +14,8 @@ evildict = {"a": "а",
 "y": "у"}
 
 def fuck_up_name(vname):
+    if vname in keyword.kwlist + dir(builtins) + ["var"]:
+        return vname
     new_name = ""
     added = False
     for letter in vname:
