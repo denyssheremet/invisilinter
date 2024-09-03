@@ -1,4 +1,17 @@
 import ast
+import keyword
+import builtins
+
+
+# PASTE CODE HERE:
+src_code = """
+# Your code here ... 
+
+"""
+
+
+
+
 
 evildict = {"a": "а",
 "c": "с",
@@ -39,3 +52,5 @@ class toLower(ast.NodeTransformer):
 def wreak_havoc(src_code):
     '''Call this function! Pass the code as parameter.'''
     return ast.unparse(toLower().visit(ast.parse(src_code)))
+
+print(wreak_havoc(src_code))
